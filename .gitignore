@@ -1,0 +1,16 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup and temp files
+*.bak
+*.tmp
+*.log
+
+# Local caches & runtime artifacts
+node_modules/
+limits-cache.json
+remaining-limits-config.js
+*.token
+*.pid
