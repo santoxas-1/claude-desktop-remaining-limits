@@ -519,7 +519,7 @@
 
           setTimeout(() => {
             refreshBtn.classList.remove('crl-spinning');
-            if (textSpan) textSpan.textContent = 'Обновлено!';
+            if (textSpan) textSpan.textContent = 'Обновлено++++!';
 
             setTimeout(() => {
               if (textSpan) textSpan.textContent = 'Обновить данные';
