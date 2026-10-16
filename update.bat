@@ -12,13 +12,11 @@ if not exist "%ION_DIR%" (
 )
 
 copy /y "%SCRIPT_DIR%remaining-limits.js" "%ION_DIR%\remaining-limits.js" >nul
-echo [OK] remaining-limits.js updated.
-
-powershell -NoProfile -ExecutionPolicy Bypass -Command "$h = '%ION_DIR%\index.html'; $c = [System.IO.File]::ReadAllText($h, [System.Text.Encoding]::UTF8); if ($c -notmatch 'remaining-limits\.js') { $c = $c.Replace('<script src=\"/cosmic-slider.js\"></script>', '<script src=\"/cosmic-slider.js\"></script><script src=\"/remaining-limits.js\"></script>'); [System.IO.File]::WriteAllText($h, $c, [System.Text.Encoding]::UTF8); Write-Host '[OK] Re-connected in index.html' -ForegroundColor Green; } else { Write-Host '[OK] Connected in index.html' -ForegroundColor Green; }"
+echo [OK] remaining-limits.js скопирован.
 
 if exist "%SCRIPT_DIR%start-sync.vbs" (
     start "" wscript.exe "%SCRIPT_DIR%start-sync.vbs"
-    echo [OK] Sync daemon started.
+    echo [OK] Фоновый синхронизатор запущен.
 )
 
 echo.
